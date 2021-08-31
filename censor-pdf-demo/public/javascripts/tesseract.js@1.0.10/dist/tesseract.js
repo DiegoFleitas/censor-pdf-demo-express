@@ -316,8 +316,8 @@
             'use strict';
 
             var defaultOptions = {
-                // workerPath: 'https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/worker.js',
-                corePath: 'https://cdn.rawgit.com/naptha/tesseract.js-core/0.1.0/index.js',
+                workerPath: 'http://localhost:3000/javascripts/tesseract.js@1.0.10/dist/worker.js',
+                corePath: 'http://localhost:3000/javascripts/tesseract.js-core/0.1.0/index.js',
                 langPath: 'https://cdn.rawgit.com/naptha/tessdata/gh-pages/3.02/'
             };
 
@@ -326,7 +326,7 @@
                 defaultOptions.workerPath = location.protocol + '//' + location.host + '/dist/worker.dev.js?nocache=' + Math.random().toString(36).slice(3);
             } else {
                 var version = require('../../package.json').version;
-                defaultOptions.workerPath = 'https://cdn.rawgit.com/naptha/tesseract.js/' + version + '/dist/worker.js';
+                defaultOptions.workerPath = 'http://localhost:3000/javascripts/tesseract.js@1.0.10/dist/worker.js';
             }
 
             exports.defaultOptions = defaultOptions;
